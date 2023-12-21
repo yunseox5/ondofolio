@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --primary: rgb(0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--primary);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+img {
+  width: 100%;
+}
+
+.highlighted {
+  color: var(--accent);
+}
+
+.container {
+  padding: 4rem 2rem;
+}
+
+/* contact styles */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.project-header img {
+  /* max-width: 80%; */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.contact-item-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.contact-form input,
+textarea {
+  background: var(--secondery);
+  border: 0;
+  padding: 0.8rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+
+/* desktop design */
+@media screen and (min-width: 720px) {
+  .container {
+    padding: 4rem 6rem;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 6rem;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    margin: 0 0.5rem;
+    border: none;
+    position: relative;
+  }
+
+  .nav-item::after {
+    margin: 0;
+    top: 35px;
+    position: absolute;
+  }
+
+  .toggler {
+    display: none;
+  }
+
+  /* services and project grid */
+  .grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .grid-item {
+    width: 30%;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-info {
+    width: 50%;
+  }
+
+  .contact-form-container {
+    width: 60%;
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Cosmic Symphony</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="project3.css" />
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer {
+        margin-top: auto;
+      }
+
+      .iframe-container {
+        width: 100%;
+        max-width: 1450px; /* Optional: Set a maximum width */
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        padding-top: 37%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+      }
+      .reload-button {
+        position: absolute;
+        top: 580px;
+        left: 10px;
+        padding: 12px;
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        border: 0.3px solid #ffffff; /* 외곽선 추가 */
+        border-radius: 50px; /* 모서리 둥글게 */
+        cursor: pointer;
+        font-weight: 500;
+      }
+      .reload-description {
+  position: absolute;
+  top: 578.5px;
+  left: 188px;
+  font-size: 145x;
+  color: #ffffff;
+  padding-top: 12px; /* 버튼과의 간격 조절 */
+}
+
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .project-header img:nth-of-type(3) {
+  margin-bottom: 30px; /* 1.png와 2.png 사이에 20px의 공백을 설정합니다. */
+  
+}
+.project-header img:nth-of-type(4) {
+  margin-bottom: 30px; /* 1.png와 2.png 사이에 20px의 공백을 설정합니다. */
+  
+}
+.project-header img:nth-of-type(6) {
+  margin-bottom: 30px; /* 1.png와 2.png 사이에 20px의 공백을 설정합니다. */
+  
+}
+
+.half-size-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%; /* 이미지 사이의 간격 조절 */
+  margin-bottom: 30px;
+}
+
+.half-size {
+  width: 49%; /* 크기 조절 */
+  height: auto; /* 자동으로 높이 조절 */
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+    </header>
+
+  
+    <section class="projects container" id="projects">
+      <div class="project-header">
+        <div class="images">
+          <img src="./images/data1.webp" alt="Data Cosmic Symphony" />
+          <div class="iframe-container">
+            <iframe
+              id="cosmic-iframe"
+              src="cosmic.html"
+              frameborder="0"
+            ></iframe>
+            <button class="reload-button" onclick="reloadIframe()">🚀Click to Reload💨 </button>
+            <div class="reload-description">⬅️ 버튼을 클릭하면 새로운 아트가 그려져요✨</div>
+          </div>
+          <img src="./images/data2.webp" alt="Data Cosmic Symphony" />
+
+          <img style="width: 99.5%; height: 99.5%;" src="./images/1.png" alt="Data Cosmic Symphony" />
+
+          <div class="half-size-container">
+          <img class="half-size" src="./images/2.png" alt="Data Cosmic Symphony" />
+          <img class="half-size" src="./images/3.png" alt="Data Cosmic Symphony" />
+        </div>
+
+          <img style="width: 99.5%; height: 99.5%;" src="./images/4.png" alt="Data Cosmic Symphony" />
+
+          <div class="half-size-container">
+          <img class="half-size" src="./images/5.png" alt="Data Cosmic Symphony" />
+          <img class="half-size" src="./images/6.png" alt="Data Cosmic Symphony" />
+        </div>
+
+          <img style="width: 99.5%; height: 99.5%;"src="./images/7.png" alt="Data Cosmic Symphony" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2023 Oyunseo All Right Reserved</p>
+    </footer>
+
+    <script src="./project3.js"></script>
+    <script>
+      function reloadIframe() {
+        console.log('Reload button clicked');
+        var iframe = document.getElementById('cosmic-iframe');
+        iframe.src = iframe.src; // This triggers a reload
+      }
+    </script>
+
+  </body>
+</html>
